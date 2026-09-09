@@ -1,0 +1,41 @@
+[
+  {
+    "name": "example-retail.test",
+    "authoritative_servers": ["ns1.example-dns.test", "ns2.example-dns.test"],
+    "dnssec_enabled": false,
+    "transfer_restricted": true,
+    "recursion_exposed": false,
+    "dmarc_policy": "none",
+    "spf_present": true,
+    "caa_present": false,
+    "stale_records": 3,
+    "public_admin_records": 1,
+    "provider": "synthetic-managed-dns"
+  },
+  {
+    "name": "example-manufacturing.test",
+    "authoritative_servers": ["ns1.lab-dns.test", "ns2.lab-dns.test"],
+    "dnssec_enabled": true,
+    "transfer_restricted": false,
+    "recursion_exposed": true,
+    "dmarc_policy": "missing",
+    "spf_present": false,
+    "caa_present": true,
+    "stale_records": 7,
+    "public_admin_records": 2,
+    "provider": "synthetic-self-hosted"
+  },
+  {
+    "name": "example-health.test",
+    "authoritative_servers": ["ns1.secure-dns.test", "ns2.secure-dns.test"],
+    "dnssec_enabled": true,
+    "transfer_restricted": true,
+    "recursion_exposed": false,
+    "dmarc_policy": "reject",
+    "spf_present": true,
+    "caa_present": true,
+    "stale_records": 0,
+    "public_admin_records": 0,
+    "provider": "synthetic-managed-dns"
+  }
+]
